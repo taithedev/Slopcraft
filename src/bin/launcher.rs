@@ -43,7 +43,6 @@ fn launch() -> Result<(), String> {
     }
     Command::new(&executable)
         .args(env::args_os().skip(1))
-        .current_dir(executable.parent().ok_or("Game directory is missing")?)
         .spawn()
         .map_err(|error| format!("Could not start {}: {error}", executable.display()))?;
     Ok(())
