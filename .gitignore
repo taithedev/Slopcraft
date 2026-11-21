@@ -1,6 +1,6 @@
 /target/
-/dist/
+*.pdb
 /saves/
+/dist/
 /mods/
 *.log
-*.pdb
